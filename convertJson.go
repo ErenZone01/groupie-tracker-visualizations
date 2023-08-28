@@ -10,6 +10,7 @@ func JsonconvertApi(body []byte, err error) {
 	err = json.Unmarshal(body, &data)
 	if err != nil {
 		fmt.Println("Erreur lors de la désérialisation de la réponse JSON :", err)
+		serv()
 		return
 	}
 }

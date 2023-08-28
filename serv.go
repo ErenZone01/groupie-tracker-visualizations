@@ -12,21 +12,18 @@ func serv() {
 	http.HandleFunc("/", handler)
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("./css/"))))
 	http.Handle("/icone/", http.StripPrefix("/icone/", http.FileServer(http.Dir("./icone/"))))
-
 	fmt.Println("Serveur en cours d'exécution sur http://localhost:8080/")
-
 	http.HandleFunc("/artist/", handlerPost)
 	http.ListenAndServe(":8080", nil)
 }
 
 func handlerPost(w http.ResponseWriter, r *http.Request) {
-	var api = "https://groupietrackers.herokuapp.com/api"
 	_, err := http.Get(api)
 	if err != nil {
 		errorFile(w, r, "Error 500")
 	} else {
 		Allitem.Searchs = Search{}
-		Start()
+		Start(w, r)
 		url := strings.Split(r.URL.Path, "/")
 		if len(url) == 3 {
 			id := url[len(url)-1]
@@ -61,14 +58,12 @@ func handlerPost(w http.ResponseWriter, r *http.Request) {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-
-	var api = "https://groupietrackers.herokuapp.com/api"
 	_, err := http.Get(api)
 	if err != nil {
 		errorFile(w, r, "Error 500")
 	} else {
 		Allitem.Searchs = Search{}
-		Start()
+		Start(w, r)
 		if r.URL.Path != "/" {
 			var typeError = "Error 404"
 			w.WriteHeader(http.StatusNotFound)
