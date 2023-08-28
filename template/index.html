@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Groupie Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="/icone/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="Home">
+        <div class="Menu">
+            <div class="menu">
+                <a class="home" href="/">Home</a>
+                <a href="#artists" class="artists">All artists</a>
+            </div>
+        </div>
+        <h1>Groupie Tracker</h1>
+        <p>.</p>
+    </div>
+    <div id="artists" class="container">
+        {{range $index, $artist := .Artists}}
+        <main>
+            <a class="lien" href="/artist/{{$artist.Id}}">
+                <div class="card">
+                    <div class="card-content">
+                        <img src="{{$artist.Image}}" width="100%" alt="">
+                        <h2>
+                            {{$artist.Name}}
+                        </h2>
+                    </div>
+                </div>
+            </a>
+        </main>
+        {{end}}
+    </div>
+
+</body>
+
+</html>

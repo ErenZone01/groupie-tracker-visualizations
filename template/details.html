@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Details</title>
+    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="shortcut icon" href="/icone/favicon.ico" type="image/x-icon">
+</head>
+
+
+<body>
+
+    <div class="Menu">
+        <div class="menu">
+            <a class="home" href="/">Home</a>
+        </div>
+
+    </div>
+    <div class="container">
+        {{range $index, $artist := .Artists}} {{if eq $index $.Id}}
+        <div class="container1">
+            <main>
+                <div class="card">
+                    <div class="card-content">
+                        <img src="{{$artist.Image}}" width="100%" alt="">
+                        <h2>
+                            {{$artist.Name}}
+                        </h2>
+                    </div>
+                </div>
+            </main>
+            <main>
+                <div class="card">
+                    <div class="card-content">
+                        <p>
+                            <span>Creation Date:</span> <br> {{$artist.CreationDate}} <br>
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <main>
+                <div class="card">
+                    <div class="card-content">
+                        <p>
+                            <span>First Album:</span> <br> {{$artist.FirstAlbum}} <br>
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="container2">
+            <main>
+                <div class="card">
+                    <div class="card-content">
+                        <p>
+                            <span>Concert Dates:</span> <br>{{range $DateIndex, $date := $.Dates}} {{if eq $DateIndex $index}} {{range $date.Dates}} {{.}} <br> {{end}} {{end}}{{end}}
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <br>
+            <main>
+                <div class="card">
+                    <div class="card-content">
+                        <div>
+                            <p>
+                                <span>Relations:</span> <br> {{range $indexRel, $relation := $.Relations}} {{if eq $indexRel $index}} {{range $relation.DatesLocations}} {{.}} <br> <br> {{end}} {{end}} {{end}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <main>
+                <div class="card">
+                    <div class="card-content">
+                        <p>
+                            <span>Members:</span> <br> {{range $memberIndex, $member := $artist.Members}} {{$member}} <br> {{end}}
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <main>
+                <div class="card">
+                    <div class="card-content">
+                        <p>
+                            <span>Locations:</span> <br> {{range $locationIndex, $location := $.Location}} {{if eq $locationIndex $index}} {{range $location.Locations}} {{.}}<br> {{end}} {{end}} {{end}}
+                        </p>
+                    </div>
+                </div>
+            </main>
+        </div>
+        {{end}} {{end}}
+    </div>
+</body>
+
+</html>

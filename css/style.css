@@ -1,0 +1,172 @@
+body {
+    background-color: rgb(66, 64, 64);
+}
+
+
+
+@media(max-width: 750px) {
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        overflow: none;
+    }
+
+}
+
+.Home {
+    background: url("https://img.freepik.com/vecteurs-libre/fond-musical-abstrait-vecteur-illustration-vectorielle_206725-624.jpg?size=626&ext=jpg&ga=GA1.1.16183336.1689232066&semt=ais");
+    background-repeat: no-repeat;
+    background-size:cover;
+    text-align: center;
+    border-radius: 20px;
+    overflow:auto;
+}
+
+.Menu {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.789);
+    height: 90px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.erreur {
+    text-align: center;
+    font-size: 405%;
+    color: white;
+}
+
+h1 {
+    font-weight: bolder;    
+    color: black;
+    margin-top: 10%;
+    font-size: 350%;
+    animation: titre 5s infinite;
+    margin-bottom: 30%;
+    opacity: 10px;
+}
+
+@keyframes titre {
+    0% {
+        color: rgb(0, 0, 0);
+        margin-left: 0px;
+    }
+    20% {
+        color: rgb(61, 61, 61);
+        margin-left: 5px;
+    }
+    40% {
+        color: rgb(136, 136, 136);
+        margin-left: 10px;
+    }
+    60% {
+        color: rgb(136, 136, 136);
+        margin-right: 10px;
+    }
+    80% {
+        color: rgb(61, 61, 61);
+        margin-right: 5px;
+    }
+    100% {
+        color: rgb(0, 0, 0);
+        margin-right: 0px;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 50px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.329);
+}
+
+.card {
+    width: 205px;
+    height: 265px;
+    margin: 35px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 10px 5px 10px black;
+    overflow: hidden;
+    background-color: white;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content img {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.card-content h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin-bottom: 5px;
+}
+
+.card-content span {
+    font-weight: bold;
+}
+
+.card:hover {
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.home {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    border-color: white;
+    border-style: double;
+    padding: 5px;
+}
+
+.home:hover {
+    background-color: black;
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.301);
+    font-weight: bolder;
+    font-size: 40px;
+    padding-left: 80px;
+}
+
+.lien {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+.artists{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    border-color: white;
+    border-style: double;
+    padding: 5px;
+}
+
+.corps{
+    background-color: rgb(43, 41, 41);
+}

@@ -1,0 +1,137 @@
+body {
+    background-color: rgb(66, 64, 64);
+    background: url("https://img.freepik.com/vecteurs-libre/motif-notes-musique-fond-noir_1017-32303.jpg?size=626&ext=jpg&ga=GA1.2.1616532413.1689234081&semt=ais");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    height: auto
+}
+
+.container {
+    display: flex;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 50px;
+    margin: 10px;
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.329);
+}
+
+@media(max-width: 750px) {
+    .container {
+        display: inline-block;
+    }
+    .container2 {
+        display: flex;
+        float: left;
+    }
+}
+
+p {
+    text-align: center;
+}
+
+li {
+    text-align: center;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+    margin: 35px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 10px 5px 10px black;
+    overflow: hidden;
+    align-items: center;
+    background-color: white;
+    /* Les points sont positionnés à l'intérieur de la zone de texte */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.card-content h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    margin-bottom: 5px;
+}
+
+.card-content span {
+    font-weight: bold;
+}
+
+main {
+    display: contents;
+}
+
+.Menu {
+    display: flex;
+    justify-content: space-between;
+    /* Divise la zone en deux colonnes égales */
+    padding-right: 20px;
+    background-color: rgba(255, 255, 255, 0.789);
+    height: 90px;
+    align-items: center;
+    border-radius: 20px;
+}
+
+input {
+    width: 250px;
+    font-size: 20px;
+    border-color: black;
+}
+
+.home {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 20px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-color: rgb(0, 0, 0);
+    border-style: double;
+    padding: 5px;
+}
+
+.home:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.search {
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.301);
+    font-weight: bolder;
+    font-size: 40px;
+    padding-left: 80px;
+}
+
+.lien {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container1 {
+    justify-content: center;
+}
